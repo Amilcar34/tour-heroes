@@ -1,12 +1,5 @@
-<div *ngIf="editHero">
-  <h2>My Heroe</h2>
-  <h2>{{editHero.name | uppercase}} Details</h2>
-  <div>id: {{editHero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="editHero.name" placeholder="name">
-  </div>
-</div>
+<p>hero works!</p>
+<app-hero-detail [heroSelected]="editHero"></app-hero-detail>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
