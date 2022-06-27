@@ -1,6 +1,5 @@
 <p>hero works!</p>
-<app-hero-detail [heroSelected]="editHero"></app-hero-detail>
-<h2>My Heroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <button [class.selected]="hero === editHero" type="button" (click)="onSelectHero(hero)" >
@@ -9,3 +8,7 @@
     </button>
   </li>
 </ul>
+
+<div *ngIf="editHero">
+  <app-hero-detail [heroSelected]="editHero"></app-hero-detail>
+</div>
