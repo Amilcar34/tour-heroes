@@ -1,14 +1,7 @@
 <p>hero works!</p>
-
+<button type="button" (click)="goBack()">go back</button>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <button [class.selected]="hero === editHero" type="button" (click)="onSelectHero(hero)" >
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-    </button>
-  </li>
+  <a *ngFor="let hero of heroes" routerLink="/hero/detail/{{hero.id}}">
+    {{hero.name}} <br>
+  </a>
 </ul>
-
-<div *ngIf="editHero">
-  <app-hero-detail [heroSelected]="editHero"></app-hero-detail>
-</div>
